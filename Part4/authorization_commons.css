@@ -1,0 +1,112 @@
+@import "commons.css";
+
+
+
+/* Handling the styles of the authorization button */
+.authorization_button {
+    display: inline;
+    border-radius: 30px;
+    color: black;
+    background-color: orange;
+    /* width: 100%; */
+    font-family: var(--font_family);
+    font-size: var(--font_size);
+    text-align: center;
+    line-height: 30px;
+    width: 130px;
+    border: 0;
+}
+
+/* Handling the styles of the authorization form */
+.authorization_form {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 40%;
+    width: 100%;
+}
+
+/* Handling the styles of the authorization input */
+.text_input {
+    display: block;
+    width: 200px;
+    background-color: white;
+    line-height: 30px;
+    display:inline;
+    border: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+/* Handling the styles of the authorization lables */
+.lables {
+    display: block;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 120px;
+    line-height: 30px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+    height: 100%;
+    text-align: center;
+    background-color: rgb(0, 192, 198);
+    color: white;
+}
+
+/* an 10 * 30 empty block*/
+.empty_lables {
+    display: block;
+    width: 10px;
+    line-height: 30px;
+    height: 30px;
+}
+
+/* an 10 * 6 empty block*/  
+.few_distance_lables {
+    display: block;
+    width: 10px;
+    line-height: 6px;
+    height: 6px;
+
+}
+
+/* this class make an object vertically center of page*/
+.vertical_center {
+    margin: auto;
+    padding: 10px;
+}
+  
+/* Handling the styles of the authorization div that contains authorization table */
+.authorization_div{
+    background-color: #e2e2e2;
+    text-align: center;
+    height: 100%;
+    max-width: var(--maximum_width);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* Handling the styles of the authorization table that contains authorization inputs and lables */
+.authorization_table{
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display:inline;
+
+}
+
+/* Handling the styles of the authorization title on the top of authorization table */
+.authorization_title{
+    text-align: center;
+    display: block;
+    color: rgb(0, 192, 198);
+    margin-bottom: 30px;
+    margin-top: 100px;
+    display:inline;
+}

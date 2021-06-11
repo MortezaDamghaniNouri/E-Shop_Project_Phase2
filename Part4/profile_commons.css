@@ -1,0 +1,99 @@
+@import "commons.css";
+
+/* Handling the styles of the welcome message in the page */
+#welcome_message {
+    margin-top: 70px;
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    justify-content: center;
+
+
+}
+
+/* Handling the styles of the tabs bar in the page */
+#tabs {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 3.5%;
+    margin-top: 0.7%;
+    margin-bottom: 1%;
+
+
+
+}
+
+/* Handling the styles of the bills button in the tabs bar */
+#bills_button {
+    height: 100%;
+    width: 15%;
+    border-bottom-left-radius: 24px;
+    border-top-left-radius: 24px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+
+}
+
+/* Handling the styles of the bills list in the tabs bar */
+#bills_list {
+    display: block;
+    background-color: white;
+    height: 60%;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    overflow: scroll;
+    margin-bottom: 70px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+    box-shadow: 3px 3px 3px 3px #9f9f9f;
+
+
+}
+
+/* Handling the styles of each row in the container of purchased products */
+.row {
+    display: flex;
+
+
+}
+
+/* Handling the styles of each cell in the container of purchased products */
+.cell {
+    display: block;
+    margin-right: 3%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 20%;
+
+
+}
+
+/* Handling the styles of each hr in HTML file */
+hr {
+    display: block;
+    margin-right: 1%;
+    margin-left: 1%;
+
+
+}
+
+/* Handling the styles of the main container of the page */
+#main_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #e2e2e2;
+    max-width: var(--maximum_width);
+    width: 90%;
+    margin-bottom: 5%;
+
+
+}

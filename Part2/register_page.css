@@ -1,0 +1,30 @@
+@import "authorization_commons.css";
+
+/* Handling the styles of the address input */
+.address_input {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    line-height: 60px;
+    display:inline;
+    border: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+/* Handling the styles of the address lable */
+#address_label {
+    display: block;
+    width: 120px;
+    line-height: 60px;
+    height: 100%;
+    text-align: center;
+    background-color: rgb(0, 192, 198);
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+

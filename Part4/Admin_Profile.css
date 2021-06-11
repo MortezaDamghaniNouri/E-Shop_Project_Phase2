@@ -1,0 +1,181 @@
+@import "profile_commons.css";
+@import "authorization_commons.css";
+
+/* Handling the styles of each button in the tabs bar */
+.button_checked {
+    background-color: grey;
+
+}
+
+/* Handling the styles of each button in the tabs bar */
+.button_unchecked {
+    background-color: #e2e2e2;
+}
+
+/* Handling the styles of the category button in the tabs bar */
+#profile_category {
+    height: 100%;
+    width: 15%;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+
+}
+
+/* Handling the styles of the commodity button in the tabs bar */
+#profile_commodity {
+    height: 100%;
+    width: 15%;
+    border-bottom-right-radius: 24px;
+    border-top-right-radius: 24px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+
+}
+
+/* Handling the styles of the search lable on the top of the category list*/
+.search_lables {
+    display: block;
+    width: 200px;
+    line-height: 30px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+    height: 100%;
+    text-align: center;
+    background-color: rgb(0, 192, 198);
+    color: white;    
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+/* Handling the styles of the search input on the top of the category list*/
+.search_input {
+    width: 500px;
+    background-color: white;
+    line-height: 30px;
+    display:flex;
+    border: 0;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+
+}
+
+/* Handling the styles of the search form on the top of the category list*/
+.search_form {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+/* Handling the styles of the each button int the category list*/
+.category_button{
+    border: none;
+    background-color: white;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+}
+
+/* Handling the styles of the each button int the category list*/
+.category_button:hover {color: rgb(48, 213, 200);}
+
+#form_tab {
+    top: 18px;
+    width: 100%;
+    display: block;
+}
+
+
+/* Handling the styles of the category list*/
+#category_list {
+    background-color: white;
+    height: 70%;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    overflow: scroll;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+    box-shadow: 3px 3px 3px 3px #9f9f9f;
+    margin-top: 2%;
+
+
+}
+
+/* Handling the styles of the commodity tab*/
+#commodity_tab {
+    height: 40%;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+    flex-wrap: wrap;
+}
+
+/* Handling the styles of each cirles in the commodity tab*/
+.circle {
+    position:relative;
+    margin-right: 94%;
+    top: -5px;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 3px 3px 3px 3px grey;
+}
+
+/* make every text center of each circles */
+.text_center {
+    right: 25%;
+    align-content: center;
+    text-align: center;
+    align-self: center;
+  }
+
+/* Handling the styles of the add product button on the top of the commodity tab*/
+#add_product{
+    display: block;
+    width: 100%;
+}
+
+/* make minimum size of an object 150*40*/
+.min_with_150px{
+    min-width: 150px;
+    min-height: 40px;
+
+}
+
+/* Handling the styles of each tab*/
+.tab_content {
+    z-index: 3;
+    top: 10%;
+    width: 100%;
+    padding: 10px 25px 25px 25px;
+    margin-top: 1%;
+    text-align: center;
+    max-width: var(--maximum_width);
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+/* make minimum width of an object 5%*/
+.small_cell {
+    width: 5%;
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

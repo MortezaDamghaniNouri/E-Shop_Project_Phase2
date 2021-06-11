@@ -1,0 +1,384 @@
+/* start commons 
+    we should make it in one file later + it's content*/
+/* It is used to remove the initial white spaces which browsers use */
+* {
+    margin: 0px;
+    padding: 0px;
+
+
+}
+
+
+
+/* Handling some variables */
+:root {
+    --font_size: 16px;
+    --maximum_width: 1280px;
+    --font_family: Yekan;
+
+
+
+}
+
+
+/* Header part starts here */
+/* Handling the main styles of headers */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: black;
+    line-height: 65px;
+    max-width: 1280px;
+    background-color: white;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+    display: flex;
+
+
+}
+
+/* Handling the styles of each button in the header */
+.menu_button {
+    display: flex;
+    width: 35%;
+    align-items: center;
+    justify-content: flex-end;
+
+
+}
+
+body {
+    display: flex;
+    background-color: #e2e2e2;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* Handling the main styles of dropdown menu */
+#drop_down_menu {
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: yellow;
+    border-radius: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    padding-right: 1%;
+    padding-left: 1%;
+
+
+
+
+
+
+}
+
+/* Handling the style of dropdown menu during hover */
+#drop_down_menu:hover {
+    background-color: yellow;
+
+
+
+
+
+}
+
+
+
+
+/* Handling the styles of entrance button in the header */
+.select_item {
+    background-color: grey;
+    font-size: var(--font_size);
+    display: block;
+
+
+
+
+}
+
+/* Handling the style of entrance button in the header */
+#menu_button {
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 24px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+
+
+
+
+
+}
+
+/* Handling the style of entrance button in the header */
+#menu_button:hover {
+    background-color: yellow;
+
+
+}
+
+
+/* Handling the styles of each item at the right part of the header */
+.menu_item {
+
+    display: block;
+    justify-content: center;
+    padding-left: 5%;
+
+
+}
+
+/* Handling the style of each item at the right part of the header */
+.menu_item:hover {color: rgb(48, 213, 200);}
+
+
+/* Handling the styles of the container of the items at the right part of the header */
+.menu_items {
+    display: flex;
+    width: 60%;
+
+
+
+}
+
+
+/* Handling the styles of the shop icon at the top of the page */
+#shop_icon {
+    padding-right: 60px;
+    font-size: 120%;
+    color: rgb(48, 213, 200);
+
+
+}
+/* Drop down menu implementation */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 7%;
+    text-align: center;
+    margin-right: 28%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    min-width: 112px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 1; /* Showing the button over the drop down menu*/
+
+
+
+
+}
+
+/* Contents inside the dropdown */
+.dd_content {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: right;
+}
+
+/* Changing the  color of dropdown content on hover */
+.dd_content:hover {
+    background-color: silver;
+}
+
+/* Showing the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+
+
+
+
+}
+
+/* Handling the styles of the container of the dropdown menu */
+.dropdown:hover .dropbtn {
+    position: relative;
+    background-color: yellow;
+    top: 14px;
+
+}
+
+
+
+/* Handling the styles of the button at the dropdown menu */
+.dropbtn {
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: yellow;
+    border-radius: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 124%;
+    font-size: var(--font_size);
+    margin-top: 16px;
+    z-index: 2; /* Showing the button over the drop down menu*/
+
+}
+
+.dropbtn:hover {
+    background-color: yellow;
+
+}
+
+/* Handling the styles of the button of the dropdown menu during hover */
+#last_content {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+}
+
+
+/* Header part ends here */
+/* Footer part starts here */
+/* Handling the styles of the footer */
+footer {
+
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
+    color: grey;
+    background-color: black;
+    line-height: 65px;
+    max-width: var(--maximum_width);
+
+
+}
+
+
+/* Product boxes design */
+.products_container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #e2e2e2;
+    width: 73%;
+    height: 860px;
+    color: black;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
+
+
+}
+
+/* Handling the styles of the container of the product */
+.product_box {
+    margin-right: 15px;
+    background-color: white;
+    margin-bottom: 15px;
+    max-width: 25%;
+    width: 20%;
+    /* height: 420px; */
+    color: black;
+    font-family: var(--font_family);
+    font-size: var(--font_size);
+    box-shadow: 3px 3px 3px 3px #9f9f9f;
+
+
+}
+
+
+/* Handling the styles of product image */
+.product_image {
+    display: inherit;
+    height: 50%;
+    max-height: 100px;
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 80%;
+
+
+}
+
+/* Handling the styles of the name of each product */
+.product_name {
+    display: block;
+    margin-right: 17px;
+
+
+}
+
+/* Handling the styles of the category of each product */
+.product_category {
+    display: block;
+    margin-right: 17px;
+    color: darkgray;
+    font-size: 14px;
+
+
+}
+
+/* Handling the styles of the purchase button of each product */
+.product_price_and_button {
+    display: inline-flex;
+    width: 100%;
+
+
+}
+
+
+/* Handling the styles of the price of each product */
+.product_price {
+    display: block;
+    margin-right: 17px;
+
+
+}
+
+
+/* Handling the styles of the purchase button of each product */
+.product_buy_button {
+    display: block;
+    border-radius: 24px;
+    color: white;
+    margin-right: 15%;
+    margin-left: 17px;
+    background-color: blue;
+    box-shadow: 2px 2px 2px 2px grey;
+    width: 50%;
+
+}
+
+/* Handling the styles of the body of the HTML code */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+/* end commons */

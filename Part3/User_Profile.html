@@ -1,0 +1,116 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>فروشگاه</title>
+    <link href="User_Profile_Styles.css" type="text/css" rel="stylesheet"/>
+    <!-- Handling farsi font -->
+    <meta http-equiv="content-language" content="fa"/>
+
+</head>
+<body>
+<header>
+
+    <div class="menu_items">
+
+        <div class="menu_item" id="shop_icon"> فروشگاه</div>
+        <div class="menu_item"> صفحه اول</div>
+        <div class="menu_item"> تماس با ما</div>
+        <div class="menu_item"> پشتیبانی</div>
+        <div class="menu_item"> محصولات</div>
+
+
+    </div>
+    <div class="dropdown" dir="ltr">
+        <!-- <button type="button" id="menu_button"> ورود / ثبت نام </button> -->
+
+        <button class="dropbtn">هادی</button>
+        <div class="dropdown-content">
+            <div class="dd_content">پروفایل</div>
+            <div class="dd_content" id="last_content">خروج از حساب</div>
+        </div>
+
+    </div>
+
+</header>
+
+<!-- The main part of this page containe -->
+<div id="user_profile">
+    <div id="title">
+        <div id="welcome_message">هادی عزیز، خوش آمدید |</div>
+        <div id="user_deposit">موجودی حساب شما: ۱۰/۰۰۰</div>
+        <button id="raise_deposit_button">افزایش موجودی</button>
+
+    </div>
+    <br/>
+    <div id="tabs">
+        <button id="profile_button">پروفایل</button>
+        <button id="bills_button">رسید ها</button>
+
+    </div>
+    <!-- User information parts -->
+    <table class="authorization_table">
+        <tr>
+            <th colspan="5">
+                <label class="empty_lables"> </label>
+            </th>
+        </tr>
+
+        <tr>
+            <td><label class="lables">نام</label></td>
+            <td><input type="text" class="text_input" placeholder="هادی"></td>
+            <td><label class="few_distance_lables"></label></td>
+            <td><label class="lables">نام خانوادگی</label></td>
+            <td><input type="text" class="text_input" placeholder="طباطبایی"></td>
+        </tr>
+
+        <tr>
+            <th colspan="5">
+                <label class="few_distance_lables"> </label>
+            </th>
+        </tr>
+
+        <tr>
+            <td><label class="lables">ایمیل</label></td>
+            <td><input type="email" class="text_input" placeholder=" ایمیل خود را وارد کنید ..."></td>
+            <td><label class="few_distance_lables"></label></td>
+            <td><label class="lables">رمز عبور</label></td>
+            <td><input type="password" class="text_input" required minlength="8"
+                       placeholder=" رمز عبور خود را وارد کنید ..."></td>
+        </tr>
+
+        <tr>
+            <th colspan="5">
+                <label class="few_distance_lables"> </label>
+            </th>
+        </tr>
+
+        <tr>
+            <th colspan="1">
+                <label id="address_label">آدرس</label>
+            </th>
+            <th colspan="4">
+                <input type="text" class="address_input" style="text-align: right;"
+                       placeholder=" تهران، تهران، دانشگاه امیرکبیر ...">
+            </th>
+        </tr>
+
+        <tr>
+            <th colspan="5">
+                <label class="empty_lables"> </label>
+            </th>
+        </tr>
+
+    </table>
+    <br/>
+    <button id="edit_button">ویرایش اطلاعات</button>
+
+
+</div>
+
+<footer>تمامی حقوق برای توسعه دهندگان، مرتضی دامغانی نوری و امیر رضا شیرمست محفوظ است</footer>
+
+
+</body>
+
+
+</html>
