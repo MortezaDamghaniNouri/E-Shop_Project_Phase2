@@ -1,4 +1,6 @@
-const error_type ={
+const error_type =
+{
+    GREEN_STATE : "green state",
     VALUE_SIZE_OVERFLOW : {
         ADDRESS: "address overflow",
         DEFAULT : "default overflow"
@@ -11,20 +13,64 @@ const error_type ={
     },
     INVALID_EMAIL_PATTERN : "invalid email pattern",
     EMPTY_INPUT : "empty input"
-}
+};
+
+register_id = [];
 
 async function declare_error(id, type)
 {
+    let infoCell = document.getElementById(id);
+    infoCell.style.borderColor = "red";
+    register_id[id] = type;
+    let errorcell = document.getElementById(id + "error");
+    switch(type) 
+    {
+        case error_type.EMPTY_INPUT:
+            errorcell.value = "* باید پر شود."
+        case error_type.INVALID_EMAIL_PATTERN:
+            errorcell.value = "* ایمیل نا معتبر است."
+        case error_type.INVALID_PASSWORD_PATTERN.INVALID_SIZE:
+            errorcell.value = "* رمز عبور باید حداقل ۸ رقم باشد."
+        case error_type.INVALID_PASSWORD_PATTERN.LACK_OF_NUMBER:
+        errorcell.value = "* رمز عبور باید عدد داشته باشد."
+        case error_type.INVALID_PASSWORD_PATTERN.LACK_OF_ALPHABET:
+            errorcell.value = "* رمز عبور باید شامل حروف انگلیسی باشد."
+        case error_type.INVALID_PASSWORD_PATTERN.INVALID_CHARACTER:
+            errorcell.value = "* رمز عبور فقط باید شامل حروف انگلیسی و اعداد باشد."
+        case error_type.VALUE_SIZE_OVERFLOW.DEFAULT:
+            errorcell.value = "* فیلد باید کمتر از ۲۵۶ کاراکتر باشد."
+        case error_type.VALUE_SIZE_OVERFLOW.ADDRESS:
+            errorcell.value = "* آدرس باید کمتر از ۱۰۰۱ کاراکتر باشد."
 
+    }
 }
+
+// for (const val of a) { // You can use `let` instead of `const` if you like
+//     console.log(val);
+// }
 
 async function declare_green_state(id)
 {
+    let infoCell = document.getElementById(id);
+    infoCell.style.borderColor = "green";
+    register_id[id] = error_type.GREEN_STATE;
+    let errorcell = document.getElementById(id + "error");
+    errorcell.value = ""
 
 }
 
 function clear_value_from_white_space(id)
 {
+    let infoCell = document.getElementById(id)
+    let value = infoCell.value
+    let begin = 0
+    let end = value.length - 1
+    while(value.charAt(begin) == ' ' && end != begin)
+        begin += 1
+    while(value.charAt(end) == ' ' && end != begin)
+        end -= 1
+
+    infoCell.value = value.substring(begin, end)
 
 }
 

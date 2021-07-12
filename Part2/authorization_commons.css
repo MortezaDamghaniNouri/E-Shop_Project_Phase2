@@ -71,6 +71,15 @@
 
 }
 
+/* an 10 * 6 empty block*/  
+.error_message_lables {
+    display: block;
+    line-height: 8px;
+    height: 6px;
+    color: red;
+    text-align: center;
+}
+
 /* this class make an object vertically center of page*/
 .vertical_center {
     margin: 0;
