@@ -39,8 +39,8 @@
                 <tr>
                     <td><label class="lables">ایمیل</label></td>
                     <td>
-                        <input type="email" pattern=".{3,}" required title="3 characters minimum" 
-                        id="login_email" class="text_input" placeholder=" ایمیل خود را وارد کنید ...">
+                        <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="text" pattern=".{3,}" required title="3 characters minimum" 
+                            id="login_email" class="text_input" placeholder=" ایمیل خود را وارد کنید ...">
                     </td>
                 </tr>
                 
@@ -53,8 +53,8 @@
                 <tr>
                     <td><label class="lables">رمز عبور</label></td>
                     <td>
-                        <input type="password" class="text_input" required minlength="6" 
-                        id="login_password" placeholder=" رمز عبور خود را وارد کنید ...">
+                        <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="password" class="text_input" 
+                            required minlength="6" id="login_password" placeholder=" رمز عبور خود را وارد کنید ...">
                     </td>
                 </tr>
 
@@ -89,5 +89,7 @@
     </div>
 
     <footer>تمامی حقوق برای توسعه دهندگان، مرتضی دامغانی نوری و امیر رضا شیرمست محفوظ است</footer>
+    <script src="script.js"></script>
+
 </body>
 </html>

@@ -38,10 +38,12 @@
 
                 <tr>
                     <td><label class="lables">نام</label></td>
-                    <td><input type="text" id="register_first_name" class="text_input" placeholder=" نام خود را وارد کنید ..."></td>
+                    <td><input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="text" 
+                            id="register_first_name" class="text_input" placeholder=" نام خود را وارد کنید ..."></td>
                     <td><label class="few_distance_lables"></label></td>
                     <td><label class="lables">نام خانوادگی</label></td>
-                    <td><input type="text" id="register_last_name" class="text_input" placeholder=" نام خانوادگی خود را وارد کنید ..."></td>
+                    <td><input oninput = "change_on_input(this)" type="text" id="register_last_name" onfocusout="clear_value_from_white_space(this)" 
+                            class="text_input" placeholder=" نام خانوادگی خود را وارد کنید ..."></td>
                 </tr>
 
                 <tr>
@@ -58,11 +60,13 @@
 
                 <tr>
                     <td><label class="lables">ایمیل</label></td>
-                    <td><input type="email" id="register_email" class="text_input" placeholder=" ایمیل خود را وارد کنید ..."></td>
+                    <td><input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="text"
+                             id="register_email" class="text_input" placeholder=" ایمیل خود را وارد کنید ..."></td>
                     <td><label class="few_distance_lables"></label></td>
                     <td><label class="lables">رمز عبور</label></td>
                     <td>
-                        <input type="password" id="register_password" class="text_input" required minlength="6" placeholder=" رمز عبور خود را وارد کنید ...">
+                        <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="password"
+                            id="register_password" class="text_input" required minlength="6" placeholder=" رمز عبور خود را وارد کنید ...">
                     </td>
                 </tr>
 
@@ -83,7 +87,8 @@
                         <label id="address_label">آدرس</label>
                     </th>
                     <th colspan="4">
-                        <input type="text" id="register_address" class="address_input" placeholder=" آدرس خود را وارد کنید ...">
+                        <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" 
+                                type="text" id="register_address" class="address_input" placeholder=" آدرس خود را وارد کنید ...">
                     </th>
                 </tr>
 
@@ -105,5 +110,7 @@
     </div>
 
     <footer>تمامی حقوق برای توسعه دهندگان، مرتضی دامغانی نوری و امیر رضا شیرمست محفوظ است</footer>
+    <script src="script.js"></script>
+
 </body>
 </html>

@@ -74,10 +74,14 @@
 /* an 10 * 6 empty block*/  
 .error_message_lables {
     display: block;
-    line-height: 8px;
-    height: 6px;
+    line-height: 5px;
+    height: 5px;
     color: red;
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
 }
 
 /* this class make an object vertically center of page*/

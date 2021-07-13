@@ -1,3 +1,47 @@
+function clear_value_from_white_space(target)
+{
+    switch (target.id) {
+        case 'register_first_name':
+        case 'register_last_name':
+        case 'login_email':
+        case 'register_email':
+            let id = target.id
+            let infoCell = document.getElementById(id)
+            let value = infoCell.value
+            console.log(value.length)
+            let begin = 0
+            let end = value.length
+            while(value.charAt(begin) == ' ' && end > begin)
+                begin += 1
+            while(value.charAt(end - 1) == ' ' && end > begin)
+                end -= 1
+            infoCell.value = value.substring(begin, end)        
+            break;
+    }
+
+    change_on_input(target)
+}
+
+function change_on_input(target) {
+    switch (target.id) {
+        case 'register_first_name':
+        case 'register_last_name':
+            input_checker(target.id, "name")
+            break;
+        case 'login_email':
+        case 'register_email':
+            input_checker(target.id, "email")
+            break;
+        case 'login_password':
+        case 'register_password':
+            input_checker(target.id, "pass")
+            break;
+        case 'register_address':
+            input_checker(target.id, "address")
+            break;
+    }
+}
+
 const error_type =
 {
     GREEN_STATE : "green state",
@@ -20,27 +64,36 @@ register_id = [];
 async function declare_error(id, type)
 {
     let infoCell = document.getElementById(id);
-    infoCell.style.borderColor = "red";
+    infoCell.style.border = "1px solid #ff0000";
     register_id[id] = type;
-    let errorcell = document.getElementById(id + "error");
+    console.log(type);
+    let errorcell = document.getElementById(id + "_error");
     switch(type) 
     {
         case error_type.EMPTY_INPUT:
-            errorcell.value = "* باید پر شود."
+            errorcell.innerText = "* باید پر شود."
+            break;
         case error_type.INVALID_EMAIL_PATTERN:
-            errorcell.value = "* ایمیل نا معتبر است."
+            errorcell.innerText = "* ایمیل نا معتبر است."
+            break;
         case error_type.INVALID_PASSWORD_PATTERN.INVALID_SIZE:
-            errorcell.value = "* رمز عبور باید حداقل ۸ رقم باشد."
+            errorcell.innerText = "* رمز عبور باید حداقل ۸ رقم باشد."
+            break;
         case error_type.INVALID_PASSWORD_PATTERN.LACK_OF_NUMBER:
-        errorcell.value = "* رمز عبور باید عدد داشته باشد."
+            errorcell.innerText = "* رمز عبور باید عدد داشته باشد."
+            break;
         case error_type.INVALID_PASSWORD_PATTERN.LACK_OF_ALPHABET:
-            errorcell.value = "* رمز عبور باید شامل حروف انگلیسی باشد."
+            errorcell.innerText = "* رمز عبور باید شامل حروف انگلیسی باشد."
+            break;
         case error_type.INVALID_PASSWORD_PATTERN.INVALID_CHARACTER:
-            errorcell.value = "* رمز عبور فقط باید شامل حروف انگلیسی و اعداد باشد."
+            errorcell.innerText = "* رمز عبور فقط باید شامل حروف انگلیسی و اعداد باشد."
+            break;
         case error_type.VALUE_SIZE_OVERFLOW.DEFAULT:
-            errorcell.value = "* فیلد باید کمتر از ۲۵۶ کاراکتر باشد."
+            errorcell.innerText = "* فیلد باید کمتر از ۲۵۶ کاراکتر باشد."
+            break;
         case error_type.VALUE_SIZE_OVERFLOW.ADDRESS:
-            errorcell.value = "* آدرس باید کمتر از ۱۰۰۱ کاراکتر باشد."
+            errorcell.innerText = "* آدرس باید کمتر از ۱۰۰۱ کاراکتر باشد."
+            break;
 
     }
 }
@@ -52,25 +105,10 @@ async function declare_error(id, type)
 async function declare_green_state(id)
 {
     let infoCell = document.getElementById(id);
-    infoCell.style.borderColor = "green";
+    infoCell.style.border = "1px solid #00ff00";
     register_id[id] = error_type.GREEN_STATE;
-    let errorcell = document.getElementById(id + "error");
-    errorcell.value = ""
-
-}
-
-function clear_value_from_white_space(id)
-{
-    let infoCell = document.getElementById(id)
-    let value = infoCell.value
-    let begin = 0
-    let end = value.length - 1
-    while(value.charAt(begin) == ' ' && end != begin)
-        begin += 1
-    while(value.charAt(end) == ' ' && end != begin)
-        end -= 1
-
-    infoCell.value = value.substring(begin, end)
+    let errorcell = document.getElementById(id + "_error");
+    errorcell.innerText = ""
 
 }
 
@@ -103,19 +141,18 @@ async function input_checker(id, type)
             return;
         }
         else if(/^([a-zA-Z0-9]{8,})$/.test(value) == false)
-            declare_error(id, error_type.INVALID_PASSWORD_PATTERN.LACK_OF_NUMBER)
+            declare_error(id, error_type.INVALID_PASSWORD_PATTERN.INVALID_CHARACTER)
         else if(/^([0-9]{8,})$/.test(value) == true) 
             declare_error(id, error_type.INVALID_PASSWORD_PATTERN.LACK_OF_ALPHABET)
         else if(/^([a-zA-Z]{8,})$/.test(value) == true)
-            declare_error(id, error_type.INVALID_PASSWORD_PATTERN.INVALID_CHARACTER)
+            declare_error(id, error_type.INVALID_PASSWORD_PATTERN.LACK_OF_NUMBER)
         else
-            break;
+            declare_green_state(id);
         return;
         
     }
     else if(type == "email")
     {
-        clear_value_from_white_space(id)
         if(/^[a-z0-9A-Z\_\.\-]{1,}\@[a-z0-9\_\-]{1,}\.[a-z]{1,}$/.test(value) == false)
         {
             declare_error(id,error_type.INVALID_EMAIL_PATTERN)
@@ -124,8 +161,6 @@ async function input_checker(id, type)
     }
     else
     {
-        if(type == "name")
-            clear_value_from_white_space(id)
         if(value.length == 0)
         {
             declare_error(id, error_type.EMPTY_INPUT)
