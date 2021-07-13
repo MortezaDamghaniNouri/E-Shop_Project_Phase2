@@ -22,6 +22,7 @@ function clear_value_from_white_space(target)
     change_on_input(target)
 }
 
+//listener on inputs
 function change_on_input(target) {
     switch (target.id) {
         case 'register_first_name':
@@ -168,4 +169,48 @@ async function input_checker(id, type)
         }
     }
     declare_green_state(id)
+}
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+var body = document.getElementsByTagName("body")[0];
+var header = document.getElementsByTagName("header")[0];
+var auth_div = document.getElementById("register_div")
+var footer = document.getElementsByTagName("footer")[0];
+var btn = document.getElementById("register_button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+    header.style.display = "none";
+    auth_div.style.display = "none";
+    footer.style.display = "none";
+    // body.style.setProperty("backgroundColor","black")
+    body.style.backgroundColor = "black"
+    return false;
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    get_out();
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal)
+        get_out();
+}
+
+function get_out()
+{
+    modal.style.display = "none";
+    header.style.display = "flex";
+    auth_div.style.display = "flex";
+    footer.style.display = "block";
+    body.style.backgroundColor = ""
+    
 }

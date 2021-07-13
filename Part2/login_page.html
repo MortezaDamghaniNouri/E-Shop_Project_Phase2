@@ -39,7 +39,7 @@
                 <tr>
                     <td><label class="lables">ایمیل</label></td>
                     <td>
-                        <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="text" pattern=".{3,}" required title="3 characters minimum" 
+                        <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="text" 
                             id="login_email" class="text_input" placeholder=" ایمیل خود را وارد کنید ...">
                     </td>
                 </tr>
@@ -54,7 +54,7 @@
                     <td><label class="lables">رمز عبور</label></td>
                     <td>
                         <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="password" class="text_input" 
-                            required minlength="6" id="login_password" placeholder=" رمز عبور خود را وارد کنید ...">
+                            id="login_password" placeholder=" رمز عبور خود را وارد کنید ...">
                     </td>
                 </tr>
 
@@ -72,7 +72,7 @@
 
                 <tr>
                     <th colspan="2">
-                        <button type="submit" class="authorization_button">ورود</button>
+                        <button type="button" class="authorization_button">ورود</button>
                     </th>
                 </tr>
 

@@ -21,7 +21,7 @@
         </div>
     </header>
 
-    <div class="authorization_div">
+    <div class="authorization_div" id="register_div">
         <form action="" class="authorization_form vertical_center">
             <table class="authorization_table">
                 <tr>
@@ -66,7 +66,7 @@
                     <td><label class="lables">رمز عبور</label></td>
                     <td>
                         <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="password"
-                            id="register_password" class="text_input" required minlength="6" placeholder=" رمز عبور خود را وارد کنید ...">
+                            id="register_password" class="text_input" placeholder=" رمز عبور خود را وارد کنید ...">
                     </td>
                 </tr>
 
@@ -100,13 +100,22 @@
 
                 <tr>
                     <th colspan="5">
-                        <button type="submit" class="authorization_button">ثبت نام</button>
+                        <button id = "register_button" class="authorization_button">ثبت نام</button>
                     </th>
                 </tr>
 
             </table>
         </form>
 
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      
     </div>
 
     <footer>تمامی حقوق برای توسعه دهندگان، مرتضی دامغانی نوری و امیر رضا شیرمست محفوظ است</footer>
