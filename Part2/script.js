@@ -173,33 +173,13 @@ async function input_checker(id, type)
 
 
 // Get the modal
-var modal = document.getElementById("myModal");
-var body = document.getElementsByTagName("body")[0];
-var header = document.getElementsByTagName("header")[0];
-var auth_div = document.getElementById("register_div")
-var footer = document.getElementsByTagName("footer")[0];
-var btn = document.getElementById("register_button");
+var modal = document.getElementById("back_of_modal");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
+function load_modal(target) {
     modal.style.display = "block";
-    header.style.display = "none";
-    auth_div.style.display = "none";
-    footer.style.display = "none";
-    // body.style.setProperty("backgroundColor","black")
-    body.style.backgroundColor = "black"
     return false;
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    get_out();
-}
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal)
         get_out();
@@ -208,9 +188,4 @@ window.onclick = function(event) {
 function get_out()
 {
     modal.style.display = "none";
-    header.style.display = "flex";
-    auth_div.style.display = "flex";
-    footer.style.display = "block";
-    body.style.backgroundColor = ""
-    
 }
