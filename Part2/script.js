@@ -1,3 +1,24 @@
+const error_type =
+{
+    GREEN_STATE : "green state",
+    VALUE_SIZE_OVERFLOW : {
+        ADDRESS: "address overflow",
+        DEFAULT : "default overflow"
+    },
+    INVALID_PASSWORD_PATTERN : {
+        INVALID_SIZE : "invalid size",
+        INVALID_CHARACTER : "invalid character",
+        LACK_OF_NUMBER : "doesn't have any number",
+        LACK_OF_ALPHABET : "doesn't have any alphabet charcter"
+    },
+    INVALID_EMAIL_PATTERN : "invalid email pattern",
+    EMPTY_INPUT : "empty input"
+};
+
+declare_type = [];
+const emails = {'amir@aut.ac.ir' : '1234567A', 'ahmad@gmail.com' : 'ALI1234512345',
+        'iran@iran.co' : 'Iran9090', 'yhn@aut.co': 'iraniran0'};
+
 function clear_value_from_white_space(target)
 {
     switch (target.id) {
@@ -43,31 +64,11 @@ function change_on_input(target) {
     }
 }
 
-const error_type =
-{
-    GREEN_STATE : "green state",
-    VALUE_SIZE_OVERFLOW : {
-        ADDRESS: "address overflow",
-        DEFAULT : "default overflow"
-    },
-    INVALID_PASSWORD_PATTERN : {
-        INVALID_SIZE : "invalid size",
-        INVALID_CHARACTER : "invalid character",
-        LACK_OF_NUMBER : "doesn't have any number",
-        LACK_OF_ALPHABET : "doesn't have any alphabet charcter"
-    },
-    INVALID_EMAIL_PATTERN : "invalid email pattern",
-    EMPTY_INPUT : "empty input"
-};
-
-register_id = [];
-
 async function declare_error(id, type)
 {
     let infoCell = document.getElementById(id);
     infoCell.style.border = "1px solid #ff0000";
-    register_id[id] = type;
-    console.log(type);
+    declare_type[id] = type;
     let errorcell = document.getElementById(id + "_error");
     switch(type) 
     {
@@ -99,15 +100,11 @@ async function declare_error(id, type)
     }
 }
 
-// for (const val of a) { // You can use `let` instead of `const` if you like
-//     console.log(val);
-// }
-
 async function declare_green_state(id)
 {
     let infoCell = document.getElementById(id);
     infoCell.style.border = "1px solid #00ff00";
-    register_id[id] = error_type.GREEN_STATE;
+    declare_type[id] = error_type.GREEN_STATE;
     let errorcell = document.getElementById(id + "_error");
     errorcell.innerText = ""
 
@@ -154,7 +151,7 @@ async function input_checker(id, type)
     }
     else if(type == "email")
     {
-        if(/^[a-z0-9A-Z\_\.\-]{1,}\@[a-z0-9\_\-]{1,}\.[a-z]{1,}$/.test(value) == false)
+        if(/^[a-z0-9A-Z\_\.\-]{1,}\@[a-z0-9\_\-\.]{1,}\.[a-z]{1,}$/.test(value) == false)
         {
             declare_error(id,error_type.INVALID_EMAIL_PATTERN)
             return;
@@ -176,8 +173,85 @@ async function input_checker(id, type)
 var modal = document.getElementById("back_of_modal");
 
 function load_modal(target) {
-    modal.style.display = "block";
+    let is_basic_check_successfull = false;
+    let errorcell = document.getElementById("basic_error");
+    let content_cell = document.getElementById('modal_content');
+
+    content_cell.innerHTML = "";
+    content_cell.setAttribute('class', 'modal_content_class');
+
+    if(target.id == "login_button")
+        is_basic_check_successfull = create_login_modal_content();
+    else
+        is_basic_check_successfull = create_register_modal_content();
+
+    if(is_basic_check_successfull)
+    {
+        errorcell.innerText = ""
+        modal.style.display = "block";
+    }
+    else
+        errorcell.innerText = "اطلاعات به درستی وارد نشده اند."
+
     return false;
+}
+
+function create_register_modal_content()
+{
+    input_checker('register_first_name', "name")
+    input_checker('register_last_name', "name")
+    input_checker('register_email', "email")
+    input_checker('register_password', "pass")
+    input_checker('register_address', "address")
+    for (const val in declare_type)
+        if (declare_type[val] != error_type.GREEN_STATE)
+            return false;
+    let email = document.getElementById('register_email').value;
+    let content_cell = document.getElementById('modal_content');
+
+    if(typeof emails[email] === 'undefined')
+    {
+        content_cell.innerText = "ثبت نام با موفقیت انجام شد."
+        content_cell.style.color = "green"
+    }
+    else
+    {
+        content_cell.innerText = "این ایمیل قبلا ثبت شده است."
+        content_cell.style.color = "red"
+    }
+
+    return true;
+}
+
+function create_login_modal_content()
+{
+    input_checker('login_email', "email")
+    input_checker('login_password', "pass")
+    for (const val in declare_type)
+        if (declare_type[val] != error_type.GREEN_STATE)
+            return false;
+
+    let email = document.getElementById('login_email').value;
+    let password = document.getElementById('login_password').value;
+    let content_cell = document.getElementById('modal_content');
+
+    if(typeof emails[email] === 'undefined')
+    {
+        content_cell.innerText = "این ایمیل ثبت نشده است."
+        content_cell.style.color = "red"
+    }
+    else if(emails[email] == password)
+    {        
+        content_cell.innerText = "ورود با موفقیت انجام شد."
+        content_cell.style.color = "green"
+    }
+    else
+    {
+        content_cell.innerText = "رمز عبور نادرست است."
+        content_cell.style.color = "red"
+    }
+
+    return true;
 }
 
 window.onclick = function(event) {

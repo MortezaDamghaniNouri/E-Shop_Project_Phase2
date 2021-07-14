@@ -71,19 +71,6 @@
 
 }
 
-/* error messages label*/  
-.error_message_lables {
-    display: block;
-    line-height: 5px;
-    height: 5px;
-    color: red;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: var(--font_size);
-    font-family: var(--font_family);
-}
-
 /* this class make an object vertically center of page*/
 .vertical_center {
     margin: 0;
@@ -127,6 +114,21 @@
 }
 
 
+/* phase 2: */
+
+
+/* error messages label*/  
+.error_message_lables {
+    display: block;
+    line-height: 5px;
+    height: 5px;
+    color: red;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+}
 
 #back_of_modal {
     display: none;
@@ -138,10 +140,12 @@
     background-color: rgba(0,0,0,0.4);
 }
 
-#modal_content {
+.modal_content_class {
     overflow: auto;
     max-height: 70%;
     margin-right: 30px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
 }
 
 .the_modal {
@@ -162,6 +166,5 @@
 .close:hover,
 .close:focus {
     color: black;
-    text-decoration: none;
     cursor: pointer;
 }

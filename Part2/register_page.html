@@ -103,7 +103,11 @@
                         <button id = "register_button" class="authorization_button" onclick = "return load_modal(this)">ثبت نام</button>
                     </th>
                 </tr>
-
+                <tr>
+                    <th colspan="5">
+                        <label class="error_message_lables" id="basic_error"> </label>
+                    </th>
+                </tr>
             </table>
         </form>
 
@@ -115,10 +119,7 @@
           <span class="close" onclick = "get_out()">&times;</span>
           <br>
           <br>
-          <div id = "modal_content">Some text in the Modal..
-            Some text in the Modal..
-            <p>Some text in the Modal..</p>
-          </div>
+          <div id = "modal_content"></div>
         </div>
       
     </div>
