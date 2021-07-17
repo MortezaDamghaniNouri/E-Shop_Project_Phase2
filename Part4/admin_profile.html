@@ -1,0 +1,294 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>فروشگاه</title>
+    <link href="Admin_Profile.css" type="text/css" rel="stylesheet"/>
+    <meta http-equiv="content-language" content="fa"/>
+</head>
+
+<body>
+<header>
+
+    <div class="menu_items">
+        <div class="menu_item" id="shop_icon"> فروشگاه</div>
+        <div class="menu_item"> صفحه اول</div>
+        <div class="menu_item"> تماس با ما</div>
+        <div class="menu_item"> پشتیبانی</div>
+        <div class="menu_item"> محصولات</div>
+    </div>
+
+    <div class="dropdown" dir="ltr">
+        <!-- <button type="button" id="menu_button"> ورود / ثبت نام </button> -->
+
+        <button class="dropbtn">ادمین</button>
+        <div class="dropdown-content">
+            <div class="dd_content">پروفایل</div>
+            <div class="dd_content" id="last_content">خروج از حساب</div>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- The main container of the page -->
+<div id="main_div">
+    <div id="welcome_message">
+        <div id="username">هادی</div>
+        <div> عزیز، خوش آمدید</div>
+
+    </div>
+    <div id="tabs">
+        <button id="profile_commodity" class="button_unchecked" onclick="select_commondity()">لیست کالا ها</button>
+        <button id="profile_category" class="button_unchecked" onclick="select_category_list()">لیست دسته ها</button>
+        <button id="bills_button" class="button_unchecked" onclick="select_bills_list()">رسید ها</button>
+
+    </div>
+
+
+        <!-- The container of the category list -->
+    <div id="category_list" class="tab_content">
+        <div class="row" id="titles">
+            <div class="cell">نام دسته بندی</div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell">عملیات</div>
+            <div class="cell"></div>
+
+
+        </div>
+        <hr />
+        <div class="row">
+            <div class="cell">دسته بندی</div>
+            <div class="cell"></div>
+            <button class="cell category_button">ویرایش دسته بندی</button>
+            <div class="cell"></div>
+            <button class="cell category_button">Xحذف دسته بندی</button>
+
+
+        </div>
+        <hr />
+        <div class="row">
+            <div class="cell">دسته بندی</div>
+            <div class="cell"> </div>
+            <button class="cell category_button">ویرایش دسته بندی</button>
+            <div class="cell"></div>
+            <button class="cell category_button">Xحذف دسته بندی</button>
+
+
+        </div>
+        <hr />
+        <div class="row">
+            <div class="cell">دسته بندی</div>
+            <div class="cell"></div>
+            <button class="cell category_button">ویرایش دسته بندی</button>
+            <div class="cell"></div>
+            <button class="cell category_button">Xحذف دسته بندی</button>
+
+
+        </div>
+        <hr />
+        <div class="row">
+            <div class="cell">دسته بندی</div>
+            <div class="cell"></div>
+            <button class="cell category_button">ویرایش دسته بندی</button>
+            <div class="cell"></div>
+            <button class="cell category_button">Xحذف دسته بندی</button>
+
+
+        </div>
+        <hr />
+        <div class="row">
+            <div class="cell">دسته بندی</div>
+            <div class="cell"></div>
+            <button class="cell category_button">ویرایش دسته بندی</button>
+            <div class="cell"></div>
+            <button class="cell category_button">Xحذف دسته بندی</button>
+
+
+        </div>
+        <hr />
+
+
+
+    </div>
+    <form id="form_tab" action="" class="search_form">
+        <table class="authorization_table">
+            <tr>
+                <td>
+                    <label class="search_lables">جست و جوی کد پیگیری</label>
+                </td>
+                <td>
+                    <input type="search" class="search_input" placeholder=" کد پیگیری خود را برای جستجو وارد کنید ...">
+                </td>
+            </tr>
+            <tr>
+                <th rowspan="2">
+                    <label class="empty_lables"> </label>
+                </th>
+            </tr>
+        </table>
+    </form>
+
+    <!-- The container of the bills list -->
+    <div id="bills_list">
+        <div class="row" id="titles">
+            <div class="cell">کد پیگیری</div>
+            <div class="cell">کالا</div>
+            <div class="cell">قیمت پرداخت شده</div>
+            <div class="cell">آدرس ارسال شده</div>
+
+
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="cell">SHOP102030</div>
+            <div class="cell">کوله پشتی کوه نوردی</div>
+            <div class="cell">۱۵۰۰۰۰ تومان</div>
+            <div class="cell">تهران، تهران، دانشگاه امیر کبیر</div>
+
+
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="cell">SHOP102030</div>
+            <div class="cell">کوله پشتی کوه نوردی</div>
+            <div class="cell">۱۵۰۰۰۰ تومان</div>
+            <div class="cell">تهران، تهران، دانشگاه امیر کبیر</div>
+
+
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="cell">SHOP102030</div>
+            <div class="cell">کوله پشتی کوه نوردی</div>
+            <div class="cell">۱۵۰۰۰۰ تومان</div>
+            <div class="cell">تهران، تهران، دانشگاه امیر کبیر</div>
+
+
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="cell">SHOP102030</div>
+            <div class="cell">کوله پشتی کوه نوردی</div>
+            <div class="cell">۱۵۰۰۰۰ تومان</div>
+            <div class="cell">تهران، تهران، دانشگاه امیر کبیر</div>
+
+
+        </div>
+        <hr/>
+    </div>
+
+    <form id="add_product" class="search_form">
+        <table class="authorization_table">
+            <tr>
+                <td>
+                    <button type="button" class="product_buy_button min_with_150px">+ایجاد محصول جدید</button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+    <div id="commodity_div">
+        <!-- The container of the commodity table -->
+        <table id="commodity_tab" class="tab_content">
+            <tr>
+                <td class="small_cell"></td>
+                <td class="product_box">
+                    <div class="circle">
+                        <div class="vertical_center text_center">50</div>
+                    </div>
+                    <img src="Images/Bag_Image.png" class="product_image"/>
+                    <br/>
+                    <div class="product_name">کوله پشتی کوهنوردی</div>
+                    <br/>
+                    <div class="product_category">دسته بندی یک</div>
+                    <br/>
+                    <hr/>
+                    <br/>
+                    <div class="product_price_and_button">
+                        <div class="product_price">۱۵۰۰۰۰ تومان</div>
+                        <button type="button" class="product_buy_button">ویرایش محصول</button>
+
+
+                    </div>
+
+
+                    <br/>
+                    <br />
+
+
+                </td>
+
+
+                <td class="small_cell"></td>
+
+                <td class="product_box">
+                    <div class="circle">
+                        <div class="vertical_center text_center">50</div>
+                    </div>
+                    <img src="Images/Bag_Image.png" class="product_image"/>
+                    <br/>
+                    <div class="product_name">کوله پشتی کوهنوردی</div>
+                    <br/>
+                    <div class="product_category">دسته بندی یک</div>
+                    <br/>
+                    <hr/>
+                    <br/>
+                    <div class="product_price_and_button">
+                        <div class="product_price">۱۵۰۰۰۰ تومان</div>
+                        <button type="button" class="product_buy_button">ویرایش محصول</button>
+
+
+                    </div>
+
+                    <br />
+                    <br/>
+
+                </td>
+
+
+                <td class="small_cell"></td>
+
+                <td class="product_box">
+                    <div class="circle">
+                        <div class="vertical_center text_center">50</div>
+                    </div>
+                    <img src="Images/Bag_Image.png" class="product_image"/>
+                    <br/>
+                    <div class="product_name">کوله پشتی کوهنوردی</div>
+                    <br/>
+                    <div class="product_category">دسته بندی یک</div>
+                    <br/>
+                    <hr/>
+                    <br/>
+                    <div class="product_price_and_button">
+                        <div class="product_price">۱۵۰۰۰۰ تومان</div>
+                        <button type="button" class="product_buy_button">ویرایش محصول</button>
+
+
+
+                    </div>
+                    <br />
+
+
+                    <br/>
+
+                </td>
+                <td class="small_cell"></td>
+            </tr>
+
+        </table>
+    </div>
+
+
+</div>
+
+
+<footer>تمامی حقوق برای توسعه دهندگان، مرتضی دامغانی نوری و امیر رضا شیرمست محفوظ است</footer>
+<script src="script.js"></script>
+
+</body>
+
+
+</html>

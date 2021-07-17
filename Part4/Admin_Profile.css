@@ -155,7 +155,7 @@
     max-width: var(--maximum_width);
     align-items: center;
     justify-content: center;
-    display: block;
+    display: none;
 }
 
 /* make minimum width of an object 5%*/
