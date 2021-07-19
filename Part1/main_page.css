@@ -303,7 +303,8 @@ footer {
 #clock_image {
 
     max-width: var(--maximum_width);
-
+    height: 40%;
+    width: 60%;
 
 }
 
