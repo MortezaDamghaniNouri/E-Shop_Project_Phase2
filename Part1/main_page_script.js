@@ -232,7 +232,21 @@ function slider_image_next() {
 
 
 
+function change_paging_button_handler() {
+    let desired_value = document.getElementById("number_of_items").value;
+    if(desired_value == 15 || desired_value == 9 || desired_value == 6) {
+        number_of_products_in_each_page = parseInt(desired_value);
+        products_renderer(current_page);
 
+
+
+    }
+
+
+
+
+
+}
 
 
 

@@ -345,7 +345,7 @@ footer {
 #second_section {
     background-color: #e2e2e2;
     width: 100%;
-    height: 2600px;
+    height: 2400px;
     max-width: var(--maximum_width);
     display: inline-flex;
     flex-wrap: wrap;
