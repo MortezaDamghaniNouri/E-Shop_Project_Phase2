@@ -299,12 +299,44 @@ footer {
 
 }
 
+.sliding_window_button {
+    display: block;
+    height: 10%;
+    width: 5%;
+    text-align: center;
+    background-color: white;
+    font-weight: bold;
+
+
+
+
+}
+
+#sliding_window {
+
+    display: inline-flex;
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+}
+
+
+
 /* Handling the styles of the clock image */
 #clock_image {
 
     max-width: var(--maximum_width);
-    height: 40%;
+    height: 100%;
     width: 60%;
+    margin-right: 10%;
+    margin-left: 10%;
+
+
 
 }
 
