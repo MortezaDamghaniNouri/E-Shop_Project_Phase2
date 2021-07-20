@@ -325,9 +325,30 @@ function paging_button_handler(input_string) {
 }
 
 
+function onmouseenter_handler(element) {
+    element.style.backgroundColor = "silver";
+    element.style.borderStyle = "solid";
+    element.style.borderColor = "black";
+    element.style.fontWeight = "bold";
+    element.style.fontSize = "medium";
+
+}
+
+function onmouseleave_handler(element) {
+    let page_number = parseInt(element.id.charAt(element.id.length - 1));
+    if(page_number != current_page) {
+        element.style.borderStyle = "wave";
+        element.style.fontSize = "small";
+        element.style.fontWeight = "normal";
+        element.style.borderColor = "grey";
+        element.style.backgroundColor = "#e2e2e2";
 
 
 
+    }
+
+
+}
 
 
 

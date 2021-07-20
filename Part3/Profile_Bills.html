@@ -52,6 +52,7 @@
 
         <!-- User information parts -->
         <table class="authorization_table">
+
             <tr>
                 <th colspan="5">
                     <label class="empty_lables"> </label>
@@ -60,30 +61,47 @@
 
             <tr>
                 <td><label class="lables">نام</label></td>
-                <td><input type="text" class="text_input" placeholder="هادی"></td>
+                <td><input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="text"
+                           id="register_first_name" class="text_input" placeholder=" نام خود را وارد کنید ..."></td>
                 <td><label class="few_distance_lables"></label></td>
                 <td><label class="lables">نام خانوادگی</label></td>
-                <td><input type="text" class="text_input" placeholder="طباطبایی"></td>
+                <td><input oninput = "change_on_input(this)" type="text" id="register_last_name" onfocusout="clear_value_from_white_space(this)"
+                           class="text_input" placeholder=" نام خانوادگی خود را وارد کنید ..."></td>
             </tr>
 
             <tr>
-                <th colspan="5">
+                <th colspan="2">
+                    <label class="error_message_lables" id="register_first_name_error"> </label>
+                </th>
+                <td>
                     <label class="few_distance_lables"> </label>
+                </td>
+                <th colspan="2">
+                    <label class="error_message_lables" id="register_last_name_error"> </label>
                 </th>
             </tr>
 
             <tr>
                 <td><label class="lables">ایمیل</label></td>
-                <td><input type="email" class="text_input" placeholder=" ایمیل خود را وارد کنید ..."></td>
+                <td><input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="text"
+                           id="register_email" class="text_input" placeholder=" ایمیل خود را وارد کنید ..."></td>
                 <td><label class="few_distance_lables"></label></td>
                 <td><label class="lables">رمز عبور</label></td>
-                <td><input type="password" class="text_input" required minlength="8"
-                           placeholder=" رمز عبور خود را وارد کنید ..."></td>
+                <td>
+                    <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)" type="password"
+                           id="register_password" class="text_input" placeholder=" رمز عبور خود را وارد کنید ...">
+                </td>
             </tr>
 
             <tr>
-                <th colspan="5">
+                <th colspan="2">
+                    <label class="error_message_lables" id="register_email_error"> </label>
+                </th>
+                <td>
                     <label class="few_distance_lables"> </label>
+                </td>
+                <th colspan="2">
+                    <label class="error_message_lables" id="register_password_error"> </label>
                 </th>
             </tr>
 
@@ -92,20 +110,30 @@
                     <label id="address_label">آدرس</label>
                 </th>
                 <th colspan="4">
-                    <input type="text" class="address_input" style="text-align: right;"
-                           placeholder=" تهران، تهران، دانشگاه امیرکبیر ...">
+                    <input oninput = "change_on_input(this)" onfocusout="clear_value_from_white_space(this)"
+                           type="text" id="register_address" class="address_input" placeholder=" آدرس خود را وارد کنید ...">
                 </th>
             </tr>
 
             <tr>
                 <th colspan="5">
-                    <label class="empty_lables"> </label>
+                    <label class="error_message_lables" id="register_address_error"> </label>
                 </th>
             </tr>
 
+            <tr>
+                <th colspan="5">
+                    <button id="edit_button" onclick = "return load_modal(this)">ویرایش اطلاعات</button>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="5">
+                    <label class="error_message_lables" id="basic_error"> </label>
+                </th>
+            </tr>
         </table>
         <br/>
-        <button id="edit_button">ویرایش اطلاعات</button>
+
 
     </div>
 
@@ -173,10 +201,19 @@
     </div>
 
 
-
 </div>
 
+<div id="back_of_modal">
 
+    <!-- Modal content -->
+    <div class="the_modal">
+        <span class="close" onclick = "get_out()">&times;</span>
+        <br>
+        <br>
+        <div id = "modal_content"></div>
+    </div>
+
+</div>
 
 
 

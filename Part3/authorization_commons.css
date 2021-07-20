@@ -100,3 +100,63 @@
     margin-top: 100px;
     display:inline;
 }
+
+/* error messages label*/
+.error_message_lables {
+    display: block;
+    line-height: 5px;
+    height: 5px;
+    color: red;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+}
+
+#back_of_modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal_content_class {
+    overflow: auto;
+    max-height: 70%;
+    margin-right: 30px;
+    font-size: var(--font_size);
+    font-family: var(--font_family);
+}
+
+.the_modal {
+    border-radius: 25px;
+    background-color: white;
+    margin: 100px auto;
+    padding: 20px;
+    max-width: 450px;
+}
+
+/* The Close Button */
+.close {
+    color: gray;
+    float: right;
+    font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
