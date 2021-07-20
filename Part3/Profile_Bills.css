@@ -212,8 +212,9 @@ body {
 
 }
 
+
 /* Handling the styles of the main container of this page */
-#user_profile {
+#main_div1 {
     display: block;
     width: 60%;
     height: 50%;
@@ -246,16 +247,6 @@ body {
 
 }
 
-/* Handling the styles of the welcome message of this page*/
-#welcome_message2 {
-    display: block;
-    font-weight: bold;
-    font-size: 20px;
-
-
-}
-
-
 
 
 /* Handling the styles of the raise deposit button of this page */
@@ -279,7 +270,7 @@ body {
 }
 
 /* Handling the styles of the tabs bar of this page */
-#tabs {
+#tabs1 {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -388,6 +379,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 100%;
 
 }
 
@@ -635,7 +627,7 @@ body {
 }
 
 /* Handling the styles of the main container of the page */
-#main_div {
+#main_div2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -643,13 +635,14 @@ body {
     flex-direction: row;
     background-color: #e2e2e2;
     max-width: var(--maximum_width);
-    width: 90%;
+    width: 100%;
+
 
 
 }
 
 /* Handling the styles of the welcome message in the page */
-#welcome_message {
+#welcome_message2 {
     margin-top: 70px;
     display: flex;
     font-weight: bold;
@@ -661,54 +654,17 @@ body {
 
 }
 
-/* Handling the styles of the tabs bar in the page */
-#tabs1 {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    height: 3.5%;
-    margin-top: 1%;
-    margin-bottom: 2%;
 
-
-}
 
 /* Handling the styles of the tabs bar in the page */
 #tabs2 {
     display: flex;
     width: 100%;
     justify-content: center;
-    height: 3.5%;
+    height: 5%;
     margin-top: 1%;
     margin-bottom: 2%;
 
-
-}
-
-
-
-/* Handling the styles of the profile button in the tabs bar */
-#profile_button {
-    height: 100%;
-    width: 15%;
-    border-bottom-right-radius: 24px;
-    border-top-right-radius: 24px;
-    background-color: #e2e2e2;
-    font-size: var(--font_size);
-    font-family: var(--font_family);
-
-
-}
-
-/* Handling the styles of the bills button in the tabs bar */
-#bills_button {
-    height: 100%;
-    width: 15%;
-    border-bottom-left-radius: 24px;
-    border-top-left-radius: 24px;
-    font-size: var(--font_size);
-    font-family: var(--font_family);
-    background-color: grey;
 
 }
 
