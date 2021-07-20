@@ -3,6 +3,86 @@ let products_array = [];
 let number_of_products_in_each_page = 15;
 let current_page = 1;
 
+function slides_show(){
+    if(image_counter == 0){
+        document.getElementById("clock_image").src = "Images/clock1.png";
+        ++ image_counter;
+
+    }
+    else{
+        if(image_counter == 1){
+            document.getElementById("clock_image").src = "Images/clock2.png";
+            ++ image_counter;
+
+        }
+        else{
+            if(image_counter == 2){
+                document.getElementById("clock_image").src = "Images/clock0.png";
+                image_counter = 0;
+
+            }
+        }
+
+    }
+    setTimeout(slides_show, 10000);
+}
+
+
+function paging_controller() {
+
+    if(current_page == 1) {
+        document.getElementById("previous_page_button").style.display = "none";
+        document.getElementById("next_page_button").style.display = "block";
+    }
+    else {
+        let temp1 = current_page;
+        ++temp1;
+        if ((temp1 - 1) * number_of_products_in_each_page >= 45) {
+            document.getElementById("next_page_button").style.display = "none";
+            document.getElementById("previous_page_button").style.display = "block";
+        }
+        else {
+            document.getElementById("next_page_button").style.display = "block";
+            document.getElementById("previous_page_button").style.display = "block";
+
+        }
+
+    }
+
+
+    for(let temp = 1;temp <= 8; ++temp) {
+        if ((temp - 1) * number_of_products_in_each_page < 45) {
+            let index = temp.toString();
+            let visible_page_number = document.getElementById("page" + index);
+            visible_page_number.style.display = "block";
+            visible_page_number.style.borderStyle = "wave";
+            visible_page_number.style.fontSize = "small";
+            visible_page_number.style.fontWeight = "normal";
+            visible_page_number.style.borderColor = "grey";
+            visible_page_number.style.backgroundColor = "#e2e2e2";
+
+        }
+        else {
+            let index = temp.toString();
+            document.getElementById("page" + index).style.display = "none";
+
+        }
+
+
+    }
+    let current_page_button = document.getElementById("page" + current_page.toString());
+    current_page_button.style.backgroundColor = "silver";
+    current_page_button.style.borderStyle = "solid";
+    current_page_button.style.borderColor = "black";
+    current_page_button.style.fontWeight = "bold";
+    current_page_button.style.fontSize = "medium";
+
+
+
+}
+
+
+
 function products_array_generator() {
     let product1 = ["Images/bag0.png","کوله پشتی کوه نوردی", "دسته بندی یک", "۱۵۰۰۰۰ تومان"];
     products_array.push(product1);
@@ -95,6 +175,7 @@ function products_array_generator() {
     let product45 = ["Images/bag2.png","کوله پشتی کوه نوردی", "دسته بندی سه", "۲۰۰۰۰۰ تومان"];
     products_array.push(product45);
     slides_show();
+    paging_controller();
 
 
 
@@ -107,7 +188,6 @@ function products_renderer(page_number) {
     if ((page_number - 1) * number_of_products_in_each_page < 45) {
         let needed_products = [];
         for(let i = (page_number - 1) * number_of_products_in_each_page; i < page_number * number_of_products_in_each_page; ++ i) {
-            console.log(products_array[i])
             needed_products.push(products_array[i]);
 
         }
@@ -138,6 +218,8 @@ function products_renderer(page_number) {
             temp.style.display = "none";
 
         }
+        current_page = page_number;
+        paging_controller();
 
 
     }
@@ -146,36 +228,6 @@ function products_renderer(page_number) {
 }
 
 
-
-
-
-
-
-
-
-function slides_show(){
-    if(image_counter == 0){
-        document.getElementById("clock_image").src = "Images/clock1.png";
-        ++ image_counter;
-
-    }
-    else{
-        if(image_counter == 1){
-            document.getElementById("clock_image").src = "Images/clock2.png";
-            ++ image_counter;
-
-        }
-        else{
-            if(image_counter == 2){
-                document.getElementById("clock_image").src = "Images/clock0.png";
-                image_counter = 0;
-
-            }
-        }
-
-    }
-    setTimeout(slides_show, 10000);
-}
 
 function slider_image_back() {
 
@@ -237,23 +289,40 @@ function change_paging_button_handler() {
     if(desired_value == 15 || desired_value == 9 || desired_value == 6) {
         number_of_products_in_each_page = parseInt(desired_value);
         products_renderer(current_page);
+        paging_controller();
 
 
 
     }
 
-
-
-
-
 }
 
+function paging_button_handler(input_string) {
+
+    if(input_string == "next") {
+        let temp = current_page;
+        ++temp;
+        if((temp - 1) * number_of_products_in_each_page < 45){
+            current_page = temp;
+            products_renderer(current_page);
+            paging_controller();
+
+        }
 
 
+    }
+    if(input_string == "previous") {
+        if(current_page != 1) {
+            --current_page;
+            products_renderer(current_page);
+            paging_controller();
+
+        }
 
 
+    }
 
-
+}
 
 
 
