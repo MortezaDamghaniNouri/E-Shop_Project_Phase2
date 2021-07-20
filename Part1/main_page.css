@@ -721,7 +721,7 @@ body {
 }
 
 .page_number:hover {
-    display: block;
+
     background-color: silver;
     border-style: solid;
     border-color: black;
@@ -729,8 +729,6 @@ body {
     font-size: medium;
 
 }
-
-
 
 
 

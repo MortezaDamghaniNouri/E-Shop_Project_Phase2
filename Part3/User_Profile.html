@@ -5,9 +5,10 @@
     <link href="User_Profile_Styles.css" type="text/css" rel="stylesheet"/>
     <!-- Handling farsi font -->
     <meta http-equiv="content-language" content="fa"/>
+    <script type="text/javascript" src="User_Profile_Script.js" defer></script>
 
 </head>
-<body>
+<body id="body">
 <header>
 
     <div class="menu_items">
@@ -43,10 +44,11 @@
     </div>
     <br/>
     <div id="tabs">
-        <button id="profile_button">پروفایل</button>
-        <button id="bills_button">رسید ها</button>
+        <button id="profile_button" onclick="tab_changer(this)">پروفایل</button>
+        <button id="bills_button" onclick="tab_changer(this)">رسید ها</button>
 
     </div>
+
     <!-- User information parts -->
     <table class="authorization_table">
         <tr>
@@ -106,6 +108,7 @@
 
 
 </div>
+
 
 <footer>تمامی حقوق برای توسعه دهندگان، مرتضی دامغانی نوری و امیر رضا شیرمست محفوظ است</footer>
 

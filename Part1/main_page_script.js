@@ -54,12 +54,12 @@ function paging_controller() {
         if ((temp - 1) * number_of_products_in_each_page < 45) {
             let index = temp.toString();
             let visible_page_number = document.getElementById("page" + index);
-            visible_page_number.style.display = "block";
             visible_page_number.style.borderStyle = "wave";
             visible_page_number.style.fontSize = "small";
             visible_page_number.style.fontWeight = "normal";
             visible_page_number.style.borderColor = "grey";
             visible_page_number.style.backgroundColor = "#e2e2e2";
+            visible_page_number.style.display = "block";
 
         }
         else {

@@ -1,0 +1,190 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8"/>
+    <title>فروشگاه</title>
+    <link href="Profile_Bills.css" type="text/css" rel="stylesheet"/>
+    <!-- Handling farsi font -->
+    <meta http-equiv="content-language" content="fa"/>
+    <script type="text/javascript" src="User_Profile_Script.js" defer></script>
+
+</head>
+<body id="body" onload="tabs_handler()">
+<header>
+
+    <div class="menu_items">
+
+        <div class="menu_item" id="shop_icon"> فروشگاه</div>
+        <div class="menu_item"> صفحه اول</div>
+        <div class="menu_item"> تماس با ما</div>
+        <div class="menu_item"> پشتیبانی</div>
+        <div class="menu_item"> محصولات</div>
+
+
+    </div>
+    <div class="dropdown" dir="ltr">
+        <!-- <button type="button" id="menu_button"> ورود / ثبت نام </button> -->
+
+        <button class="dropbtn">هادی</button>
+        <div class="dropdown-content">
+            <div class="dd_content">پروفایل</div>
+            <div class="dd_content" id="last_content">خروج از حساب</div>
+        </div>
+
+    </div>
+
+</header>
+
+<div id="two_html_container">
+    <div id="main_div1">
+        <!-- The main part of this page containe -->
+        <div id="title">
+            <div id="welcome_message1">هادی عزیز، خوش آمدید |</div>
+            <div id="user_deposit">موجودی حساب شما: ۱۰/۰۰۰</div>
+            <button id="raise_deposit_button">افزایش موجودی</button>
+
+        </div>
+        <br/>
+        <div id="tabs1">
+            <button id="profile_button1" onclick="tab_changer(this)">پروفایل</button>
+            <button id="bills_button1" onclick="tab_changer(this)">رسید ها</button>
+
+        </div>
+
+        <!-- User information parts -->
+        <table class="authorization_table">
+            <tr>
+                <th colspan="5">
+                    <label class="empty_lables"> </label>
+                </th>
+            </tr>
+
+            <tr>
+                <td><label class="lables">نام</label></td>
+                <td><input type="text" class="text_input" placeholder="هادی"></td>
+                <td><label class="few_distance_lables"></label></td>
+                <td><label class="lables">نام خانوادگی</label></td>
+                <td><input type="text" class="text_input" placeholder="طباطبایی"></td>
+            </tr>
+
+            <tr>
+                <th colspan="5">
+                    <label class="few_distance_lables"> </label>
+                </th>
+            </tr>
+
+            <tr>
+                <td><label class="lables">ایمیل</label></td>
+                <td><input type="email" class="text_input" placeholder=" ایمیل خود را وارد کنید ..."></td>
+                <td><label class="few_distance_lables"></label></td>
+                <td><label class="lables">رمز عبور</label></td>
+                <td><input type="password" class="text_input" required minlength="8"
+                           placeholder=" رمز عبور خود را وارد کنید ..."></td>
+            </tr>
+
+            <tr>
+                <th colspan="5">
+                    <label class="few_distance_lables"> </label>
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="1">
+                    <label id="address_label">آدرس</label>
+                </th>
+                <th colspan="4">
+                    <input type="text" class="address_input" style="text-align: right;"
+                           placeholder=" تهران، تهران، دانشگاه امیرکبیر ...">
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="5">
+                    <label class="empty_lables"> </label>
+                </th>
+            </tr>
+
+        </table>
+        <br/>
+        <button id="edit_button">ویرایش اطلاعات</button>
+
+    </div>
+
+    <div id="main_div2">
+        <div id="welcome_message2">
+            <div id="username">هادی</div>
+            <div> عزیز، خوش آمدید</div>
+
+        </div>
+        <div id="tabs2">
+            <button id="profile_button2" onclick="tab_changer(this)">پروفایل</button>
+            <button id="bills_button2" onclick="tab_changer(this)">رسید ها</button>
+
+        </div>
+        <!-- The container of the bills list -->
+        <div id="bills_list">
+            <div class="row" id="titles">
+                <div class="cell">کد پیگیری</div>
+                <div class="cell">کالا</div>
+                <div class="cell">قیمت پرداخت شده</div>
+                <div class="cell">آدرس ارسال شده</div>
+
+
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="cell">SHOP102030</div>
+                <div class="cell">کوله پشتی کوه نوردی</div>
+                <div class="cell">۱۵۰۰۰۰ تومان</div>
+                <div class="cell">تهران، تهران، دانشگاه امیر کبیر</div>
+
+
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="cell">SHOP102030</div>
+                <div class="cell">کوله پشتی کوه نوردی</div>
+                <div class="cell">۱۵۰۰۰۰ تومان</div>
+                <div class="cell">تهران، تهران، دانشگاه امیر کبیر</div>
+
+
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="cell">SHOP102030</div>
+                <div class="cell">کوله پشتی کوه نوردی</div>
+                <div class="cell">۱۵۰۰۰۰ تومان</div>
+                <div class="cell">تهران، تهران، دانشگاه امیر کبیر</div>
+
+
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="cell">SHOP102030</div>
+                <div class="cell">کوله پشتی کوه نوردی</div>
+                <div class="cell">۱۵۰۰۰۰ تومان</div>
+                <div class="cell">تهران، تهران، دانشگاه امیر کبیر</div>
+
+
+            </div>
+            <hr/>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+<footer>تمامی حقوق برای توسعه دهندگان، مرتضی دامغانی نوری و امیر رضا شیرمست محفوظ است</footer>
+
+
+</body>
+
+
+</html>

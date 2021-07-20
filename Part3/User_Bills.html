@@ -4,10 +4,11 @@
     <title>فروشگاه</title>
     <link href="User_Bills_Styles.css" type="text/css" rel="stylesheet"/>
     <meta http-equiv="content-language" content="fa"/>
+    <script type="text/javascript" src="User_Profile_Script.js" defer></script>
 
 </head>
 
-<body>
+<body id="body">
 
 <header>
 
@@ -42,8 +43,8 @@
 
     </div>
     <div id="tabs">
-        <button id="profile_button">پروفایل</button>
-        <button id="bills_button">رسید ها</button>
+        <button id="profile_button" onclick="tab_changer(this)">پروفایل</button>
+        <button id="bills_button" onclick="tab_changer(this)">رسید ها</button>
 
     </div>
     <!-- The container of the bills list -->
