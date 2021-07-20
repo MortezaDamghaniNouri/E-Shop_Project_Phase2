@@ -245,7 +245,7 @@ function load_modal(target) {
     }
     else
         errorcell.innerText = "اطلاعات به درستی وارد نشده اند."
-
+    document.getElementById("back_of_modal").classList.add("showModal");
     return false;
 }
 
@@ -316,7 +316,8 @@ window.onclick = function(event) {
 
 function get_out()
 {
-    modal.style.display = "none";
+    document.getElementById("back_of_modal").classList.add("hideModal");
+    document.getElementById("back_of_modal").classList.remove("showModal");
 }
 
 
