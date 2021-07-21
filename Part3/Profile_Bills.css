@@ -380,6 +380,7 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
 
 }
 
