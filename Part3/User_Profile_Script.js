@@ -251,10 +251,6 @@ function load_modal(target) {
 
 function create_register_modal_content()
 {
-    input_checker('register_first_name', "name")
-    input_checker('register_last_name', "name")
-    input_checker('register_password', "pass")
-    input_checker('register_address', "address")
     for (const val in declare_type)
         if (declare_type[val] != error_type.GREEN_STATE)
             return false;
