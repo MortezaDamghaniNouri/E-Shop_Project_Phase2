@@ -253,7 +253,6 @@ function create_register_modal_content()
 {
     input_checker('register_first_name', "name")
     input_checker('register_last_name', "name")
-    input_checker('register_email', "email")
     input_checker('register_password', "pass")
     input_checker('register_address', "address")
     for (const val in declare_type)
@@ -262,12 +261,6 @@ function create_register_modal_content()
     let email = document.getElementById('register_email').value;
     let content_cell = document.getElementById('modal_content');
 
-    if(typeof emails[email] === 'undefined')
-    {
-        content_cell.innerText = "این ایمیل قبلا ثبت نشده است."
-        content_cell.style.color = "red"
-    }
-    else
     {
 
         content_cell.innerText = "ویرایش اطلاعات با موفقیت انجام شد."
